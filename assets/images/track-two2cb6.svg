@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="308" height="268" viewBox="0 0 308 268">
+  <g id="popup-3" transform="translate(-410 -407)">
+    <rect id="Rectangle_608" data-name="Rectangle 608" width="308" height="268" rx="10" transform="translate(410 407)" fill="#fff"/>
+    <text id="Overall_grade_of_my_students" data-name="Overall grade of my students" transform="translate(444.329 454)" fill="#3c3c3c" font-size="17" font-family="Inter" font-weight="700"><tspan x="0" y="0">Overall grade of my students</tspan></text>
+    <text id="Overall_grade_across_the_school" data-name="Overall grade across the school" transform="translate(467.425 482)" fill="#a0a2ac" font-size="13" font-family="Inter"><tspan x="0" y="0">Overall grade across the school</tspan></text>
+    <g id="circle" transform="translate(-431 12)">
+      <g id="Ellipse_351" data-name="Ellipse 351" transform="translate(923 493)" fill="none" stroke="#10a0f3" stroke-width="20">
+        <circle cx="65" cy="65" r="65" stroke="none"/>
+        <circle cx="65" cy="65" r="55" fill="none"/>
+      </g>
+      <text id="D" transform="translate(976 569)" fill="#3c3c3c" font-size="32" font-family="Sora" font-weight="700"><tspan x="0" y="0">D</tspan></text>
+    </g>
+  </g>
+</svg>
