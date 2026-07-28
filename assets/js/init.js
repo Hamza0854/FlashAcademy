@@ -1,6 +1,4 @@
-/* FlashAcademy front-page slider init
-   Rebuilt to match the reference site's slider behaviour, since the original
-   code-split webpack chunks that initialised these were not part of the mirror. */
+
 (function () {
   function ready(fn) {
     if (document.readyState !== "loading") fn();

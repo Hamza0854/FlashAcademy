@@ -1,0 +1,1237 @@
+:root {
+  --fa-navy: #303744;
+  --fa-slate: #5e6788;
+  --fa-body: #505975;
+  --fa-core-blue: #8698f2;
+
+  --fa-green-100: #f8f9ed;
+  --fa-green-300: #d4e7af;
+  --fa-yellow-100: #fdf5e5;
+  --fa-yellow-300: #ffe5b2;
+  --fa-red-100: #fff0ed;
+  --fa-red-300: #ffd7cd;
+  --fa-purple-100: #f9f0ff;
+  --fa-purple-300: #e6cdf6;
+
+  --fa-radius: 16px;
+  --fa-radius-lg: 24px;
+  --fa-maxw: 1180px;
+  --fa-gap: 24px;
+}
+
+/* Gutenberg full-width alignment (theme has no rule for it) */
+.alignfull {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+  width: auto;
+}
+
+/* mark is used purely for inline colour in this design */
+.fa-eal-hero mark,
+.fa-image-text-block mark,
+.fa-insight-card mark {
+  background: transparent;
+  padding: 0;
+}
+
+/* Inline SVG icon wrapper */
+.flashacademy-icons-official__inner {
+  display: inline-flex;
+  line-height: 0;
+}
+.flashacademy-icons-official__inner svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   1. EAL hero
+   -------------------------------------------------------------------------- */
+.fa-eal-hero {
+  padding: clamp(1.75rem, 2.6vw, 3rem) 1.25rem 0;
+  text-align: center;
+}
+.fa-eal-hero__inner {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-eal-hero__content {
+  margin: 0 auto;
+  max-width: 860px;
+}
+.fa-eal-hero__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+  margin: 0 0 1.5rem;
+}
+.fa-eal-hero__text {
+  color: var(--fa-body);
+  font-size: clamp(1rem, 1.1vw, 1.1875rem);
+  line-height: 2;
+  margin: 0 auto;
+  max-width: 700px;
+}
+.fa-eal-hero__text p {
+  margin: 0;
+}
+.fa-eal-hero__content-blocks,
+.fa-eal-hero__actions {
+  margin-top: 1.75rem;
+}
+/* hero button row */
+.fa-eal-hero .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. Hero mascot (the globe illustration)
+   -------------------------------------------------------------------------- */
+.wp-block-flashacademy-hero-mascot {
+  display: flex;
+  justify-content: center;
+}
+.flashacademy-hero-mascot__animation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.flashacademy-hero-mascot__mascot {
+  width: clamp(200px, 15vw, 440px);
+}
+.flashacademy-hero-mascot__mascot svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   3. Cards reveal — "A complete EAL solution for every stage"
+   -------------------------------------------------------------------------- */
+.fa-cards-reveal {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.25rem;
+}
+.fa-cards-reveal__inner {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-cards-reveal__intro {
+  margin: 0 auto clamp(1.75rem, 3.5vw, 2.75rem);
+  max-width: 1000px;
+  text-align: center;
+}
+.fa-cards-reveal__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.7rem, 3.2vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin: 0 0 1.1rem;
+}
+.fa-cards-reveal__text {
+  color: var(--fa-body);
+  font-size: 1.125rem;
+  line-height: 1.95;
+  margin: 0;
+}
+.fa-cards-reveal__grid {
+  display: grid;
+  gap: 1rem;
+  gap: var(--fa-gap);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.fa-cards-reveal__card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: var(--fa-radius);
+  box-shadow: 0 2px 10px rgba(48, 55, 68, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.fa-cards-reveal__card:hover {
+  box-shadow: 0 10px 26px rgba(48, 55, 68, 0.1);
+  transform: translateY(-2px);
+}
+.fa-cards-reveal__card-media {
+  aspect-ratio: 20 / 9;
+  background: #f5f6fa;
+  overflow: hidden;
+}
+.fa-cards-reveal__card-media img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.fa-cards-reveal__card-trigger {
+  align-items: center;
+  background: none;
+  border: 0;
+  color: var(--fa-navy);
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.15rem 1.25rem;
+  text-align: left;
+  width: 100%;
+}
+.fa-cards-reveal__card-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: 0;
+}
+.fa-cards-reveal__card-arrow {
+  color: var(--fa-slate);
+  display: inline-flex;
+  flex: none;
+  transition: transform 0.25s ease;
+}
+.fa-cards-reveal__card-arrow svg {
+  height: 16px;
+  width: 16px;
+}
+.fa-cards-reveal__card.is-open .fa-cards-reveal__card-arrow {
+  transform: rotate(90deg);
+}
+.fa-cards-reveal__card-summary {
+  color: var(--fa-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0 1.25rem 1.25rem;
+}
+/* collapsed content follows the markup's aria-hidden contract */
+.fa-cards-reveal__card-summary[aria-hidden="true"],
+.fa-cards-reveal__card-panel[aria-hidden="true"] {
+  display: none;
+}
+.fa-cards-reveal__card-panel-inner {
+  padding-bottom: 0.25rem;
+}
+.fa-cards-reveal__card-description {
+  color: var(--fa-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0 1.25rem 1rem;
+}
+.fa-cards-reveal__card-link {
+  color: var(--fa-core-blue);
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 1.25rem 1.25rem;
+  text-decoration: none;
+}
+.fa-cards-reveal__card-link:hover {
+  text-decoration: underline;
+}
+.fa-cards-reveal__card-title--panel {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: 1.05rem;
+  margin: 0;
+  padding: 0 1.25rem 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Insight card — "Data-led EAL provision for international schools"
+   -------------------------------------------------------------------------- */
+.fa-insight-card {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 0;
+}
+.fa-insight-card__inner {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-insight-card__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin: 0 0 1.75rem;
+  max-width: 18ch;
+}
+.fa-insight-card__body {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+}
+.fa-insight-card--image-right .fa-insight-card__media {
+  order: 2;
+}
+.fa-insight-card__text,
+.fa-insight-card__content-blocks {
+  color: var(--fa-body);
+  font-size: 18px;
+  line-height: 1.62;
+}
+.fa-insight-card__content-blocks p {
+  margin: 0 0 1rem;
+}
+.fa-insight-card__content-blocks a {
+  color: var(--fa-core-blue);
+}
+.fa-insight-card__media {
+  display: flex;
+  justify-content: center;
+}
+.fa-insight-card__image {
+  border-radius: var(--fa-radius);
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.fa-insight-card--media-contained .fa-insight-card__image {
+  object-fit: contain;
+}
+.fa-insight-card .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Video block
+   -------------------------------------------------------------------------- */
+.fa-video-block {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: clamp(1.5rem, 4vw, 3rem) 1.25rem;
+}
+.fa-video-block__media {
+  border-radius: var(--fa-radius-lg);
+  overflow: visible;
+  position: relative;
+}
+.fa-video-block__poster {
+  border-radius: var(--fa-radius-lg);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-video-block__floating-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 6%;
+  top: -34px;
+  width: clamp(70px, 9vw, 120px);
+  z-index: 2;
+}
+.fa-video-block__trigger {
+  align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+}
+.fa-video-block__icon {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(48, 55, 68, 0.22);
+  color: var(--fa-slate);
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  width: 150px;
+}
+.fa-video-block__icon svg {
+  height: 150px;
+  width: 150px;
+}
+.fa-video-block__trigger:hover .fa-video-block__icon {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   6. Image + text block (the testimonial)
+   -------------------------------------------------------------------------- */
+.fa-image-text-block {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 0;
+}
+.fa-image-text-block__inner {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-image-text-block--ratio-text-wide .fa-image-text-block__inner {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+}
+.fa-image-text-block--image-right .fa-image-text-block__media {
+  order: 2;
+}
+.fa-image-text-block__icon {
+  color: var(--fa-core-blue);
+  display: block;
+  margin-bottom: 1rem;
+  width: 38px;
+}
+.fa-image-text-block__text {
+  color: var(--fa-body);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin: 0 0 1.25rem;
+}
+.fa-image-text-block__text strong {
+  color: var(--fa-navy);
+}
+.fa-image-text-block__media-wrap {
+  border-radius: var(--fa-radius);
+  overflow: hidden;
+}
+.fa-image-text-block__image {
+  border-radius: var(--fa-radius);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-image-text-block .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Cards block — "Built for EAL learners, schools and groups"
+   -------------------------------------------------------------------------- */
+.fa-cards-block {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 0;
+}
+.fa-cards-block__inner {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-cards-block__icon {
+  display: block;
+  margin-bottom: 1rem;
+  width: 58px;
+}
+.fa-cards-block__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin: 0 0 0.9rem;
+  max-width: 20ch;
+}
+.fa-cards-block__text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+  max-width: 70ch;
+}
+/* swiper track */
+.fa-cards-block__swiper {
+  overflow: visible;
+  width: 100%;
+}
+/* the reference lets slides run past the container's right edge */
+.fa-cards-block__inner {
+  overflow: hidden;
+}
+.fa-cards-block__swiper-wrapper {
+  align-items: stretch;
+}
+.fa-cards-block__slide {
+  align-self: stretch;
+  display: flex;
+  height: auto; /* equal-height cards */
+}
+.fa-cards-block__swiper .swiper-slide {
+  height: auto;
+}
+.fa-cards-block__card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: var(--fa-radius);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.85rem;
+  height: 100%;
+  padding: 2rem;
+}
+.fa-cards-block__card-icon {
+  width: 34px;
+}
+.fa-cards-block__card-icon svg,
+.fa-cards-block__card-icon img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-cards-block__card-title {
+  color: var(--fa-navy);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+.fa-cards-block__card-text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.fa-cards-block__card-text p {
+  margin: 0 0 0.85rem;
+}
+.fa-cards-block__card-text p:last-child {
+  margin-bottom: 0;
+}
+/* tinted card variants */
+.fa-cards-block__card--border-color-green-300 {
+  background: var(--fa-green-100);
+  border-color: var(--fa-green-300);
+}
+.fa-cards-block__card--border-color-yellow-300 {
+  background: var(--fa-yellow-100);
+  border-color: var(--fa-yellow-300);
+}
+.fa-cards-block__card--border-color-red-300 {
+  background: var(--fa-red-100);
+  border-color: var(--fa-red-300);
+}
+.fa-cards-block__card--border-color-purple-300 {
+  background: var(--fa-purple-100);
+  border-color: var(--fa-purple-300);
+}
+/* pagination */
+.fa-cards-block__dots {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+  position: static;
+}
+.fa-cards-block__dots .swiper-pagination-bullet {
+  background: #c9cddd;
+  height: 9px;
+  margin: 0 !important;
+  opacity: 1;
+  width: 9px;
+}
+.fa-cards-block__dots .swiper-pagination-bullet-active {
+  background: var(--fa-slate);
+}
+.fa-cards-block__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+.fa-cards-block__buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   8. Accordion — FAQ
+   -------------------------------------------------------------------------- */
+.fa-accordion {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.25rem;
+}
+.fa-accordion__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.4rem, 2.3vw, 2.125rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem;
+}
+.fa-accordion__items {
+  border-top: 1px solid #e7e8ee;
+}
+.fa-accordion-item {
+  border-bottom: 1px solid #e7e8ee;
+}
+.fa-accordion-item__toggle {
+  align-items: center;
+  background: none;
+  border: 0;
+  color: var(--fa-navy);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 1.5rem;
+  justify-content: space-between;
+  padding: 1.55rem 0;
+  text-align: left;
+  width: 100%;
+}
+.fa-accordion-item__question {
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.fa-accordion-item__icon {
+  color: var(--fa-slate);
+  flex: none;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.fa-accordion-item__panel[hidden] {
+  display: none;
+}
+.fa-accordion-item__panel-inner {
+  animation: fa-accordion-reveal 0.25s ease;
+}
+@keyframes fa-accordion-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fa-accordion-item__panel-inner > *:first-child {
+  margin-top: 0;
+}
+.fa-accordion-item__panel-inner p {
+  color: var(--fa-body);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+.fa-accordion-item__panel-inner {
+  padding-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .fa-cards-reveal__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fa-insight-card__body,
+  .fa-image-text-block__inner,
+  .fa-image-text-block--ratio-text-wide .fa-image-text-block__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fa-insight-card--image-right .fa-insight-card__media,
+  .fa-image-text-block--image-right .fa-image-text-block__media {
+    order: 0;
+  }
+  .fa-insight-card__title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .fa-cards-reveal__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fa-video-block__floating-icon {
+    top: -22px;
+  }
+  .fa-eal-hero .wp-block-buttons,
+  .fa-cards-block__buttons-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fa-cards-reveal__card,
+  .fa-cards-reveal__card-arrow,
+  .fa-video-block__icon {
+    transition: none;
+  }
+  .fa-accordion-item__panel-inner {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   Blocks introduced by the learning-app page
+   (hero-video, informational-split, horizontal-scroll-showcase,
+    video-and-icons). Same reconstruction approach and tokens as above.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   9. Hero video
+   -------------------------------------------------------------------------- */
+.wp-block-flashacademy-hero-video {
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto 0;
+  max-width: 1080px;
+  padding: 0 1.25rem;
+  width: 100%;
+}
+/* the hero video sits inside the hero's text column in the markup,
+   so let that column widen enough for it */
+.fa-eal-hero__content:has(.wp-block-flashacademy-hero-video) {
+  max-width: 1080px;
+}
+.fa-eal-hero__content:has(.wp-block-flashacademy-hero-video)
+  .fa-eal-hero__title,
+.fa-eal-hero__content:has(.wp-block-flashacademy-hero-video)
+  .fa-eal-hero__text {
+  margin-left: auto;
+  margin-right: auto;
+}
+.flashacademy-hero-video__glow {
+  border-radius: var(--fa-radius-lg);
+  position: relative;
+}
+.flashacademy-hero-video__glow::before {
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(255, 181, 34, 0.45),
+    transparent 70%
+  );
+  border-radius: 50%;
+  content: "";
+  filter: blur(48px);
+  inset: 8% 4% -6%;
+  position: absolute;
+  z-index: 0;
+}
+.flashacademy-hero-video__glow--yellow::before {
+  background: radial-gradient(
+    60% 60% at 50% 50%,
+    rgba(255, 181, 34, 0.5),
+    transparent 70%
+  );
+}
+.flashacademy-hero-video__wrapper {
+  aspect-ratio: 16 / 9;
+  background: var(--fa-navy) url(https://flashacademy.com/app/uploads/2026/05/learning-app-thumbnail-desktop-scaled.png)
+    center / cover no-repeat;
+  border-radius: var(--fa-radius-lg);
+  box-shadow: 0 20px 60px rgba(48, 55, 68, 0.18);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.flashacademy-hero-video__embed {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.flashacademy-hero-video__play-button {
+  align-items: center;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  z-index: 2;
+}
+.flashacademy-hero-video__play-button[hidden],
+.flashacademy-hero-video__play-button.is-hidden {
+  display: none;
+}
+.flashacademy-hero-video__play {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 26px rgba(48, 55, 68, 0.28);
+  color: var(--fa-slate);
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  width: 150px;
+    border: 6px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flashacademy-hero-video__play::before {
+  border-color: transparent transparent transparent rgb(212 212 212);
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  content: "";
+  margin-left: 5px;
+}
+.flashacademy-hero-video__play svg {
+  height: 26px;
+  width: 26px;
+}
+.flashacademy-hero-video__play svg + ::before {
+  content: none;
+}
+.flashacademy-hero-video__play-button:hover .flashacademy-hero-video__play {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   10. Informational split (sticky text + stacked cards)
+   -------------------------------------------------------------------------- */
+.fa-informational-split {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.25rem;
+}
+.fa-informational-split__grid {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-informational-split__content-sticky {
+  position: sticky;
+  top: 7rem;
+}
+.fa-informational-split__icon {
+  margin-bottom: 1rem;
+  width: 58px;
+}
+.fa-informational-split__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin: 0 0 1.1rem;
+}
+.fa-informational-split__text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+.fa-informational-split__buttons .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.fa-informational-split__cards {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.fa-informational-split__card {
+  background: var(--fa-green-100);
+  border: 1px solid #ececf1;
+  border-radius: var(--fa-radius);
+  overflow: hidden;
+  padding: 2rem;
+}
+.fa-informational-split__card-wrap:nth-child(2n) .fa-informational-split__card {
+  background: var(--fa-yellow-100);
+}
+.fa-informational-split__card-media {
+  margin-bottom: 1rem;
+}
+.fa-informational-split__card-lottie-player {
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+.fa-informational-split__card-media img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-informational-split__card-text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. Horizontal scroll showcase
+   -------------------------------------------------------------------------- */
+.fa-horizontal-showcase {
+  /* exact value recovered from the site's own inlined style-index.css */
+  padding: 2.5rem 0;
+}
+.fa-horizontal-showcase__intro-wrap {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-horizontal-showcase__icon {
+  margin-bottom: 1rem;
+  width: 58px;
+}
+.fa-horizontal-showcase__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 22ch;
+}
+.fa-horizontal-showcase__viewport {
+  overflow: hidden;
+  padding: 0 0 clamp(2.5rem, 6vw, 5.5rem);
+}
+.fa-horizontal-showcase__track {
+  display: flex;
+  gap: 26px;
+  padding-left: max(1.25rem, calc((100vw - var(--fa-maxw)) / 2));
+  transition: transform 0.15s linear;
+  will-change: transform;
+}
+.fa-horizontal-showcase__card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: var(--fa-radius);
+  display: flex;
+  flex: 0 0 374px;
+  flex-direction: column;
+  gap: 0.85rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+.fa-horizontal-showcase__card-media {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.fa-horizontal-showcase__card-media img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-horizontal-showcase__card-title {
+  color: var(--fa-navy);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+.fa-horizontal-showcase__card-text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   12. Video and icons (stats row + video)
+   -------------------------------------------------------------------------- */
+.fa-video-icons {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.25rem;
+}
+.fa-video-icons__inner {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.fa-video-icons__title {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.25rem);
+  text-align: center;
+}
+.fa-video-icons__items {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+.fa-video-icons__item {
+  text-align: center;
+}
+.fa-video-icons__icon {
+  display: block;
+  margin-bottom: 0.65rem;
+  width: 44px;
+      margin-left: auto;
+    margin-right: auto;
+}
+.fa-video-icons__icon svg,
+.fa-video-icons__icon img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fa-video-icons__item-title {
+  color: var(--fa-navy);
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.fa-video-icons__item-text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.35rem 0 0;
+}
+.fa-video-icons__media .fa-video-block {
+  max-width: none;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive for the new blocks
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .fa-informational-split__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fa-informational-split__content-sticky {
+    position: static;
+  }
+  .fa-horizontal-showcase__card {
+    flex-basis: 300px;
+  }
+  .fa-video-icons__items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .fa-horizontal-showcase__viewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .fa-horizontal-showcase__track {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    transform: none !important;
+  }
+  .fa-horizontal-showcase__card {
+    flex-basis: 82%;
+    scroll-snap-align: start;
+  }
+  .fa-video-icons__items {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .flashacademy-hero-video__play {
+    height: 58px;
+    width: 58px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-horizontal-showcase__track {
+    transition: none;
+  }
+}
+
+/* feature list panel buttons */
+.fa-feature-list-panels-buttons .wp-block-buttons,
+.fa-feature-list-panels__buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fa-feature-list-panels-buttons-gap, 24px);
+  /*justify-content: center;*/
+}
+
+/* --------------------------------------------------------------------------
+   13. Variants used by the learning-app page
+   -------------------------------------------------------------------------- */
+
+/* cards-block grid variant (no carousel) */
+.fa-cards-block__grid {
+  display: grid;
+  gap: var(--fa-gap);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.fa-cards-block--count-2 .fa-cards-block__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.fa-cards-block--count-4 .fa-cards-block__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.fa-cards-block__grid .fa-cards-block__card {
+  height: 100%;
+}
+
+/* FAQ call-to-action under the accordion */
+.fa-accordion__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.fa-accordion__header {
+  display: block;
+}
+
+/* insight-card colour + media variants */
+.fa-insight-card--peach-red {
+  background: linear-gradient(180deg,rgba(255,239,206,.5) 0,var(--Colour-red-300,rgba(255,215,205,.5)) 100%);
+  border-radius: var(--fa-radius-lg);
+  padding: 18px;
+}
+.fa-insight-card--peach-red .fa-insight-card__inner {
+  padding: 0;
+}
+.fa-insight-card--media-edge .fa-insight-card__media {
+  justify-content: flex-end;
+}
+.fa-insight-card--media-edge .fa-insight-card__image {
+  border-radius: var(--fa-radius);
+  width: 100%;
+}
+
+/* trust badge shown as a card */
+.fa-trust-badge--card {
+  background: #fff;
+  border: 1px solid #f0efef;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+
+/* horizontal showcase pin wrapper (height is set by script) */
+.fa-horizontal-showcase__pin {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .fa-cards-block__grid,
+  .fa-cards-block--count-4 .fa-cards-block__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .fa-cards-block__grid,
+  .fa-cards-block--count-2 .fa-cards-block__grid,
+  .fa-cards-block--count-4 .fa-cards-block__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. Focus states for the reconstructed interactive elements
+   -------------------------------------------------------------------------- */
+.fa-accordion-item__toggle:focus-visible,
+.fa-cards-reveal__card-trigger:focus-visible,
+.fa-video-block__trigger:focus-visible,
+.flashacademy-hero-video__play-button:focus-visible {
+  outline: 2px solid var(--fa-core-blue);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   15. Image + lottie cards (UK schools page)
+   -------------------------------------------------------------------------- */
+.flashacademy-image-lottie-cards {
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.25rem;
+}
+.flashacademy-image-lottie-cards__content {
+  margin: 0 auto;
+  max-width: var(--fa-maxw);
+}
+.flashacademy-image-lottie-cards__columns {
+  align-items: center;
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flashacademy-image-lottie-cards--content-right
+  .flashacademy-image-lottie-cards__content-right {
+  order: 2;
+}
+.flashacademy-image-lottie-cards__content-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+.flashacademy-image-lottie-cards__card {
+  background: #fff;
+  border: 1px solid #ececf1;
+  border-radius: var(--fa-radius);
+  overflow: hidden;
+  padding: 2rem;
+}
+.flashacademy-image-lottie-cards__card:nth-child(odd) {
+  background: var(--fa-green-100);
+  border-color: var(--fa-green-300);
+}
+.flashacademy-image-lottie-cards__card:nth-child(2n) {
+  background: var(--fa-yellow-100);
+  border-color: var(--fa-yellow-300);
+}
+.flashacademy-image-lottie-cards__card img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.flashacademy-image-lottie-cards__card [data-lottie-url] {
+  aspect-ratio: 16 / 9;
+  display: block;
+  width: 100%;
+}
+.flashacademy-image-lottie-cards__title-wrapper {
+  color: var(--fa-navy);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.6rem, 3.1vw, 2.875rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  margin-bottom: 1.1rem;
+}
+.flashacademy-image-lottie-cards__title-wrapper :is(h1, h2, h3, h4) {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+.flashacademy-image-lottie-cards__text {
+  color: var(--fa-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+.flashacademy-image-lottie-cards__buttons .wp-block-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 991px) {
+  .flashacademy-image-lottie-cards__columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .flashacademy-image-lottie-cards--content-right
+    .flashacademy-image-lottie-cards__content-right {
+    order: 0;
+  }
+}
+
+section.wp-block-flashacademy-insight-card .fa-insight-card__content-blocks p a {
+    color: inherit !important;
+    text-decoration: underline !important;
+    text-decoration-thickness: 1.5px !important;
+    text-underline-offset: 4px !important;
+}
